@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<!--
+  =============================================================================
+  PROPIEDAD INTELECTUAL & LICENCIA DE USO
+  Desarrollado y propiedad exclusiva de: scriptspython.pro
+  Sitio web oficial: https://scriptspython.pro
+
+  TÉRMINOS DE LICENCIA Y CONDICIONES DE USO:
+  1. USO Y MODIFICACIÓN:
+     Se otorga permiso para usar, estudiar, adaptar y modificar libremente este
+     software, código fuente y plantillas para proyectos personales o internos.
+  2. PROHIBICIÓN ESTRICTA DE COMERCIALIZACIÓN Y VENTA:
+     Queda terminantemente PROHIBIDA la venta, reventa, sublicenciamiento,
+     arrendamiento o comercialización de pago tanto de este proyecto / código,
+     como de cualquier sitio web, plantilla, tema o derivado generado con él.
+
+  Todos los derechos reservados © scriptspython.pro
+  =============================================================================
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Blog Estático - Tutoriales, Código y Recursos Prácticos</title>
+  <meta name="description" content="Aprende con tutoriales paso a paso, guías de desarrollo web y recursos descargables listos para usar.">
+  <link rel="canonical" href="https://mi-blog.pages.dev/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="scriptspython.pro">
+  <meta name="generator" content="Smart CMS Studio - scriptspython.pro">
+  <meta name="generator-license" content="Propiedad de scriptspython.pro - Permitido su uso y modificacion. Prohibida la venta de este software o de sitios web creados con el.">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mi Blog Estático - Tutoriales, Código y Recursos Prácticos">
+  <meta property="og:description" content="Aprende con tutoriales paso a paso, guías de desarrollo web y recursos descargables listos para usar.">
+  <meta property="og:url" content="https://mi-blog.pages.dev/">
+  <meta property="og:site_name" content="Mi Blog Estático">
+  <meta property="og:image" content="https://mi-blog.pages.dev/logo.png">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mi Blog Estático - Tutoriales, Código y Recursos Prácticos">
+  <meta name="twitter:description" content="Aprende con tutoriales paso a paso, guías de desarrollo web y recursos descargables listos para usar.">
+  <meta name="twitter:image" content="https://mi-blog.pages.dev/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos del Sitio -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Variables de Tema Personalizadas -->
+  <style>
+    :root {
+      --primary-color: #0d1521;
+      --primary-hover: #000000;
+      --secondary-color: #1e293b;
+      --accent-color: #3b82f6;
+      --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+  </style>
+
+  <!-- Google AdSense en Cabecera -->
+  
+
+  <!-- Schema Markup JSON-LD -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://mi-blog.pages.dev",
+  "name": "Mi Blog Estático",
+  "description": "Aprende con tutoriales paso a paso, guías de desarrollo web y recursos descargables listos para usar.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mi-blog.pages.dev/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</head>
+<body>
+
+  <!-- Cabecera Global -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand-logo" aria-label="Mi Blog Estático - Inicio">
+        <span>⚡</span>
+        <span>Mi Blog Estático</span>
+      </a>
+
+      <!-- Navegación Principal / Cajón Móvil -->
+      <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+        <div class="nav-links-wrap">
+          <a href="./" class="nav-link">Inicio</a>
+<a href="./#posts-grid" class="nav-link">Artículos</a>
+<a href="./acerca-de/" class="nav-link">Acerca de</a>
+<a href="./contacto/" class="nav-link">Contacto</a>
+
+        </div>
+      </nav>
+
+      <!-- Acciones de Cabecera (Modo Oscuro junto al Menú Hamburguesa en móvil) -->
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" type="button" aria-label="Cambiar modo oscuro / claro" title="Cambiar tema">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <!-- Botón Menú Hamburguesa Móvil -->
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" type="button" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Telón de fondo para menú móvil -->
+  <div id="mobile-nav-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+
+  <!-- Publicidad Superior AdSense -->
+  
+
+  <!-- Contenido Principal -->
+  <main id="main-content">
+    <section class="hero-section">
+  <div class="container">
+    <div class="hero-badge">
+      <span>✨</span> <span>Tecnología y Desarrollo</span>
+    </div>
+    <h1 class="hero-title">Aprende, Construye y Comparte con Inteligencia</h1>
+    <p class="hero-subtitle">Guías detalladas paso a paso, recursos descargables y mejores prácticas.</p>
+    <a href="#posts-grid" class="hero-cta-btn">🚀 Explorar Artículos</a>
+  </div>
+</section>
+
+<div class="container" id="posts-grid">
+  <!-- Barra de Filtros y Búsqueda Interactiva -->
+  <div class="controls-bar">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" class="search-input" placeholder="Buscar artículos, guías, temas..." aria-label="Buscar en el blog">
+    </div>
+
+    <div class="category-chips" id="categoryChips">
+      <button class="chip-btn active" data-category="all">Todos</button>
+      <button class="chip-btn" data-category="desarrollo web">Desarrollo Web</button>
+<button class="chip-btn" data-category="tutoriales">Tutoriales</button>
+
+    </div>
+    
+<select class="category-select" id="moreCategoriesSelect" aria-label="Más categorías" title="Mostrar más categorías">
+  <option value="all" selected>Más categorías ▾</option>
+  <option value="inteligencia artificial">Inteligencia Artificial</option><option value="guías prácticas">Guías Prácticas</option><option value="general">General</option>
+</select>
+  </div>
+
+  <!-- Grid de Artículos -->
+  <div class="posts-grid grid-3" id="postsContainer">
+    
+        <article class="post-card" data-title="Cómo Crear Sitios Web Estáticos Ultra Rápidos con IA y Cloudflare Pages" data-excerpt="Descubre paso a paso cómo crear y alojar sitios web 100% estáticos, seguros y con costo de hosting cero usando Cloudflare Pages y Google AI Studio." data-category="desarrollo web,general,tutoriales,guías prácticas,inteligencia artificial" data-tags="cloudflare, ssg, inteligencia artificial, seo">
+          <div class="card-image-wrap">
+            <a href="posts/primer-articulo-bienvenida/index.html" aria-label="Cómo Crear Sitios Web Estáticos Ultra Rápidos con IA y Cloudflare Pages">
+              <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg, var(--primary-light), var(--bg-subtle)); color:var(--primary-color); font-size:2.5rem;">📄</div>
+            </a>
+            <span class="card-category-badge">Desarrollo Web</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span>📅 15 de septiembre de 2026</span>
+              <span>•</span>
+              <span>⏱️ 2 min</span>
+            </div>
+            <h2 class="card-title">
+              <a href="posts/primer-articulo-bienvenida/index.html">Cómo Crear Sitios Web Estáticos Ultra Rápidos con IA y Cloudflare Pages</a>
+            </h2>
+            <p class="card-excerpt">Descubre paso a paso cómo crear y alojar sitios web 100% estáticos, seguros y con costo de hosting cero usando Cloudflare Pages y Google AI Studio....</p>
+            <div class="card-footer">
+              <span style="color:var(--text-muted); font-size:0.82rem;">Por Alex Desarrollador</span>
+              <a href="posts/primer-articulo-bienvenida/index.html" class="read-more-link">Leer artículo &rarr;</a>
+            </div>
+          </div>
+        </article>
+      
+  </div>
+
+  <!-- Estado sin resultados -->
+  <div id="noResults" style="display: none; text-align: center; padding: 60px 20px; color: var(--text-muted);">
+    <div style="font-size: 3rem; margin-bottom: 12px;">🔎</div>
+    <h3>No se encontraron artículos</h3>
+    <p>Prueba con otros términos de búsqueda o selecciona otra categoría.</p>
+  </div>
+</div>
+
+<!-- Buscador y Filtro 100% Vanilla JS (Zero-Backend) -->
+<script>
+  (function() {
+    const searchInput = document.getElementById('searchInput');
+    const chips = document.querySelectorAll('.chip-btn');
+    const cards = document.querySelectorAll('.post-card');
+    const noResults = document.getElementById('noResults');
+    const moreSelect = document.getElementById('moreCategoriesSelect');
+    let currentCategory = 'all';
+
+    function filterPosts() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const excerpt = (card.getAttribute('data-excerpt') || '').toLowerCase();
+        const category = (card.getAttribute('data-category') || '').toLowerCase();
+        const tags = (card.getAttribute('data-tags') || '').toLowerCase();
+
+        const matchesQuery = !query || title.includes(query) || excerpt.includes(query) || tags.includes(query);
+        const matchesCategory = currentCategory === 'all' || category.split(',').includes(currentCategory.toLowerCase());
+
+        if (matchesQuery && matchesCategory) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (noResults) {
+        noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', filterPosts);
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        chips.forEach(c => c.classList.remove('active'));
+        this.classList.add('active');
+        currentCategory = this.getAttribute('data-category');
+        if (moreSelect) moreSelect.value = 'all';
+        filterPosts();
+      });
+    });
+
+    if (moreSelect) {
+      moreSelect.addEventListener('change', function() {
+        chips.forEach(c => c.classList.remove('active'));
+        currentCategory = this.value;
+        filterPosts();
+      });
+    }
+  })();
+</script>
+
+  </main>
+
+  <!-- Publicidad Inferior AdSense -->
+  
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand-col">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <span>⚡</span>
+            <span>Mi Blog Estático</span>
+          </div>
+          <p class="footer-tagline">
+            Un blog estático moderno, rápido y optimizado para SEO.
+          </p>
+        </div>
+
+        
+        <div class="footer-col">
+          <h5>Navegación</h5>
+          <ul class="footer-links">
+            <li><a href="./">Inicio</a></li>
+<li><a href="./#posts-grid">Artículos</a></li>
+<li><a href="./acerca-de/">Acerca de</a></li>
+<li><a href="./contacto/">Contacto</a></li>
+
+          </ul>
+        </div>
+      
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <ul class="footer-links">
+            <li><a href="./privacidad/">Política de Privacidad</a></li>
+<li><a href="./terminos/">Términos de Servicio</a></li>
+<li><a href="./sitemap.xml">Sitemap XML</a></li>
+
+          </ul>
+        </div>
+      
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mi Blog Estático. Todos los derechos reservados. Desarrollado con tecnología SSG sin bases de datos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script ligero para Dark Mode y Menú Móvil -->
+  <script>
+    (function() {
+      // 1. Dark Mode
+      const savedTheme = localStorage.getItem('site-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      const btn = document.getElementById('theme-toggle-btn');
+      const icon = document.getElementById('theme-icon');
+      if (icon) icon.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+
+      if (btn) {
+        btn.addEventListener('click', function() {
+          const current = document.documentElement.getAttribute('data-theme');
+          const next = current === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', next);
+          localStorage.setItem('site-theme', next);
+          if (icon) icon.textContent = next === 'dark' ? '☀️' : '🌙';
+        });
+      }
+
+      // 2. Menú Hamburguesa Móvil
+      const menuBtn = document.getElementById('mobile-menu-toggle');
+      const nav = document.getElementById('site-nav');
+      const backdrop = document.getElementById('mobile-nav-backdrop');
+
+      function toggleMobileMenu(forceClose = false) {
+        if (!menuBtn || !nav) return;
+        const isOpen = forceClose ? false : !nav.classList.contains('mobile-active');
+        nav.classList.toggle('mobile-active', isOpen);
+        menuBtn.classList.toggle('active', isOpen);
+        menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (backdrop) backdrop.classList.toggle('active', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+      }
+
+      if (menuBtn) {
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          toggleMobileMenu();
+        });
+      }
+
+      if (backdrop) {
+        backdrop.addEventListener('click', function() {
+          toggleMobileMenu(true);
+        });
+      }
+
+      if (nav) {
+        nav.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            toggleMobileMenu(true);
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
