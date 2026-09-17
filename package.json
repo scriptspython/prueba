@@ -1,0 +1,9 @@
+{
+  "name": "static-site",
+  "version": "1.0.0",
+  "description": "Sitio estático pre-compilado listo para Cloudflare Pages y GitHub Pages",
+  "private": true,
+  "scripts": {
+    "build": "node -e \"console.log('✅ Sitio estático pre-compilado listo para desplegar.')\""
+  }
+}
