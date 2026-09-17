@@ -1,5 +1,5 @@
 {
-  "name": "prepru",
+  "name": "prueba",
   "version": "1.0.0",
   "description": "Sitio estático pre-compilado listo para Cloudflare y GitHub Pages",
   "private": true,
