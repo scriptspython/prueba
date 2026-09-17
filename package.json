@@ -1,9 +1,11 @@
 {
-  "name": "static-site",
+  "name": "prepru",
   "version": "1.0.0",
-  "description": "Sitio estático pre-compilado listo para Cloudflare Pages y GitHub Pages",
+  "description": "Sitio estático pre-compilado listo para Cloudflare y GitHub Pages",
   "private": true,
   "scripts": {
-    "build": "node -e \"console.log('✅ Sitio estático pre-compilado listo para desplegar.')\""
+    "build": "node -e \"console.log('✅ Sitio estático pre-compilado listo para desplegar.')\"",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   }
 }
